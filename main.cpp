@@ -6,6 +6,10 @@ private:
 	double re = 0.0;
 	double im = 0.0;
 public:
+	Complex()
+	{
+		std::cout << "Default constructor" << std::endl;
+	}
 	Complex(double r, double i)
 		: re(r)
 		, im(i)
