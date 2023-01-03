@@ -34,6 +34,11 @@ public:
 	{
 		memset(str, c, n);	
 	}
+	String(const String& s)
+		: str(new char[s.sz]), sz(s.sz)
+	{
+		memcpy(str, s.str, sz);	
+	}
 	
 	~String()
 	{
