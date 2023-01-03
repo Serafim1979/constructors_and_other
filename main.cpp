@@ -49,6 +49,14 @@ public:
 		memcpy(str, s.str, sz);	
 	}
 	
+	String& operator = (const String& s)
+	{
+		delete[] str;
+		str = new char[c.sz];
+		sz = s.sz;
+		memcpy(str, s.str, sz);
+	}
+	
 	~String()
 	{
 		delete[] str;
