@@ -19,6 +19,22 @@ public:
 	{}
 };
 
+class String
+{
+private:
+	char* str = nullptr;
+	size_t sz = 0;
+	
+public:	
+	String(){}
+	String(size_t n, char c)
+		: str(new char[n])
+		, sz(n)
+	{
+		memset(str, c, n);	
+	}
+};
+
 int main()
 {
 	return 0;
