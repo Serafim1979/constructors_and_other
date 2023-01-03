@@ -1,3 +1,4 @@
+#include <cstring>
 #include <iostream>
 
 class Complex
@@ -32,6 +33,11 @@ public:
 		, sz(n)
 	{
 		memset(str, c, n);	
+	}
+	
+	~String()
+	{
+		delete[] str;
 	}
 };
 
